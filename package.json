@@ -10,9 +10,9 @@
     "node": "^4.6.1"
   },
   "dependencies": {
-    "express": "^4.14.0",
-    "http-errors": "^1.7.0",
-    "mysql": "^2.10.2"
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "inherits": "^2.0.3",
