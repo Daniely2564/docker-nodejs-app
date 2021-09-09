@@ -1,4 +1,4 @@
-job('first_job') {
+job('first_node_example') {
     // Description
     description('This is my first job using DSL.')
 
@@ -11,9 +11,17 @@ job('first_job') {
 
     // source code manager
     scm {
-        git('https://github.com/Daniely2564/docker-nodejs-app.git', 'main')
+        git('https://github.com/Daniely2564/docker-nodejs-app.git', 'main') {  node -> // is hudson.plugins.git.GitSCM
+            node / gitConfigName('DSL User')
+            node / gitConfigEmail('jenkins-dsl@newtech.academy')
+        }
     }
 
-    trigger {
+    triggers {
+        cron('H 5 * * 7')
+    }
+
+    steps {
+        shell('npm install')
     }
 }
