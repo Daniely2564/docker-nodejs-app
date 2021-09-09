@@ -24,4 +24,8 @@ job('first_node_example') {
     steps {
         shell('npm install')
     }
+
+    wrappers {
+        nodejs('nodejs')
+    }
 }
